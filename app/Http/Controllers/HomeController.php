@@ -75,9 +75,9 @@ class HomeController extends Controller
         $jumlahTidakLayak = 0;
 
         foreach ($ranking as $total) {
-            if ($total > 0.6) {
+            if ($total >= 0.6 || $total >= 60.00) {
                 $jumlahLayak++;
-            } elseif ($total > 0.5) {
+            } elseif ($total <= 0.5 || $total <= 55.0) {
                 $jumlahTidakLayak++;
             }
         }
